@@ -11,7 +11,7 @@ export default function HomePage() {
             alt="NuggetIcon"
             width={80}
             height={80}
-            className="inline"
+            className="block md:inline"
           />{" "}
           <span className="text-[#FFAA00]">Nugget</span>
           <span className="text-[#AA00AA]">Hub</span>
