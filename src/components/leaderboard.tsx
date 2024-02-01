@@ -56,7 +56,7 @@ export async function Leaderboard() {
                       />
                     </TableCell>
                     <TableCell className="font-medium">{name}</TableCell>
-                    <TableCell className="hidden md:table-cell">
+                    <TableCell>
                       {player.xp}
                     </TableCell>
                     <TableCell>-</TableCell>
