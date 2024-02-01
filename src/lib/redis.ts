@@ -24,23 +24,23 @@ class RedisWithPrefix<T extends {}> {
     return this.client.hgetall<T>(`${this.prefix}:${key}`);
   }
   async getall() {
-    let keys = await this.keys();
+    const keys = await this.keys();
     const pipeline = this.client.pipeline();
-    for (let key of keys) {
+    for (const key of keys) {
       pipeline.hgetall(key);
     }
     return await pipeline.exec<T[]>();
   }
 
   async getallandlastkey() {
-    let keys = await this.keys();
+    const keys = await this.keys();
     const pipeline = this.client.pipeline();
-    for (let key of keys) {
+    for (const key of keys) {
       pipeline.hgetall(key);
     }
     const values = await pipeline.exec<T[]>();
-    let returnedValue: [string, T][] = [];
-    for (let i in keys) { 
+    const returnedValue: [string, T][] = [];
+    for (const i in keys) { 
       const split = (keys[i] as unknown as string).split(":");
       returnedValue[i] = [
         split[split.length - 1] as unknown as string,
