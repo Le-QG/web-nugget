@@ -17,6 +17,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'NuggetHub',
+    description: 'NuggetHub',
     images: [
       {
         url: "/banner.png",
