@@ -10,6 +10,21 @@ const inter = Inter({
 export const metadata = {
   title: "NuggetHub",
   icons: [{ rel: "icon", url: "/icon.webp" }],
+  twitter: {
+    images: {
+      url: '/banner.png',
+    },
+  },
+  openGraph: {
+    title: 'NuggetHub',
+    images: [
+      {
+        url: "/banner.png",
+        width: 318,
+        heigth: 141
+      }
+    ]
+  },
 };
 
 export default function RootLayout({
